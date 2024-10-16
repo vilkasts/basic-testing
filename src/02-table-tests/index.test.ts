@@ -37,6 +37,7 @@ describe('simpleCalculator', () => {
     'should return correct value',
     ({ a, b, action, expected }) => {
       const result = simpleCalculator({ a, b, action });
+
       expect(result).toBe(expected);
     },
   );
@@ -45,6 +46,7 @@ describe('simpleCalculator', () => {
     'should return null for invalid action or arguments',
     ({ a, b, action }) => {
       const result = simpleCalculator({ a, b, action });
+
       expect(result).toBeNull();
     },
   );

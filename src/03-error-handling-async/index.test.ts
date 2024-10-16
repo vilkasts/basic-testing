@@ -9,6 +9,7 @@ import {
 describe('resolveValue', () => {
   test('should resolve provided value', async () => {
     const value = 'Some test value';
+
     expect(await resolveValue(value)).toBe(value);
     expect(await resolveValue(null)).toBe(null);
   }, 30000);
@@ -17,6 +18,7 @@ describe('resolveValue', () => {
 describe('throwError', () => {
   test('should throw error with provided message', () => {
     const value = 'Some error';
+
     expect(() => throwError(value)).toThrow(value);
   });
 
