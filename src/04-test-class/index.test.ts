@@ -1,9 +1,8 @@
 import { getBankAccount } from '.';
-import clearAllMocks = jest.clearAllMocks;
 
 describe('BankAccount', () => {
   afterEach(() => {
-    clearAllMocks();
+    jest.clearAllMocks();
   });
 
   test('should create account with initial balance', () => {
