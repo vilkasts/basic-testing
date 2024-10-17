@@ -57,13 +57,13 @@ describe('BankAccount', () => {
   });
 
   test('should transfer money', () => {
-    const bankAccount1 = getBankAccount(500);
-    const bankAccount2 = getBankAccount(1000);
+    const currentBankAccount = getBankAccount(500);
+    const targetBankAccount = getBankAccount(1000);
 
-    bankAccount1.transfer(200, bankAccount2);
+    currentBankAccount.transfer(200, targetBankAccount);
 
-    expect(bankAccount1.getBalance()).toBe(300);
-    expect(bankAccount2.getBalance()).toBe(1200);
+    expect(currentBankAccount.getBalance()).toBe(300);
+    expect(targetBankAccount.getBalance()).toBe(1200);
   });
 
   test('fetchBalance should return number in case if request did not failed', async () => {

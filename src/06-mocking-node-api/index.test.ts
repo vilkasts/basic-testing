@@ -1,5 +1,5 @@
-import path from 'path';
-import fs, { promises } from 'fs';
+import path from 'node:path';
+import fs, { promises } from 'node:fs';
 import { readFileAsynchronously, doStuffByTimeout, doStuffByInterval } from '.';
 
 describe('doStuffByTimeout', () => {
