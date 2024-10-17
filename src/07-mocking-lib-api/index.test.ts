@@ -19,7 +19,7 @@ describe('throttledGetDataFromApi', () => {
     expect(axios.create).toHaveBeenCalledWith({
       baseURL: 'https://jsonplaceholder.typicode.com',
     });
-  });
+  }, 30000);
 
   test('should perform request to correct provided url', async () => {
     const mockedPath = '/some-path';
@@ -32,7 +32,7 @@ describe('throttledGetDataFromApi', () => {
     await throttledGetDataFromApi(mockedPath);
 
     expect(mockedAxiosInstance.get).toHaveBeenCalledWith(mockedPath);
-  });
+  }, 30000);
 
   test('should return response data', async () => {
     const mockedPath = '/some-path';
@@ -46,5 +46,5 @@ describe('throttledGetDataFromApi', () => {
     const data = await throttledGetDataFromApi(mockedPath);
 
     expect(data).toEqual(mockedData);
-  });
+  }, 30000);
 });

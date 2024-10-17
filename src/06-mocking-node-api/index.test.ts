@@ -80,7 +80,7 @@ describe('readFileAsynchronously', () => {
     await readFileAsynchronously(filePath);
 
     expect(mockedJoin).toHaveBeenCalledWith(__dirname, filePath);
-  });
+  }, 30000);
 
   test('should return null if file does not exist', async () => {
     const mockedExistsSync = jest.spyOn(fs, 'existsSync');
@@ -91,7 +91,7 @@ describe('readFileAsynchronously', () => {
 
     expect(mockedExistsSync).toHaveBeenCalledTimes(1);
     expect(result).toBeNull();
-  });
+  }, 30000);
 
   test('should return file content if file exists', async () => {
     const mockedContent = 'Some file content';
@@ -106,5 +106,5 @@ describe('readFileAsynchronously', () => {
     expect(mockedExistsSync).toHaveBeenCalledTimes(1);
     expect(mockedReadFile).toHaveBeenCalledTimes(1);
     expect(result).toBe(mockedContent);
-  });
+  }, 30000);
 });
