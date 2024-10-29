@@ -1,6 +1,6 @@
-# Basic testing
+# Dzmitry Luzko (Dzmitry(@vilkasts)) repo
 
-⚠️ DO NOT SUBMIT PULL REQUESTS TO THIS REPO ⚠️
+## Task 3: Basic testing
 
 ---
 
